@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+body{
+    background: rgba(86, 76, 76, 0.7)url("images/cf2.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+    border-color: antiquewhite;
+
+}
+section {
+    margin-bottom: 3em;  /* Add margin-bottom to create space between sections */
+    margin-top: 200px;
+    margin-left: 0px;
+    font-size: 25px;
+    font-weight: bold;
+    color: aqua;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 0 20px antiquewhite inset;
+    background: rgba(46, 41, 41, 0.5);
+    margin-left:400px ;
+    height: 400px;
+    width:40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    border-radius: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    color: rgb(235, 180, 227);
+    
+}
+button{
+    border-radius:30px;
+    color:antiquewhite;
+    background-color: rgb(55, 52, 49);
+    border-color: antiquewhite;
+    width: 100px;
+    text-align: center;
+    
+}
+
+
+
+
+

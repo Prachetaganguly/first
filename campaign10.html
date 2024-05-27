@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><style>body{
+    background-image: url('images/background1.jpg');
+    background-repeat: no-repeat;
+    
+    background-size: 100% 100%;}</style>
+<body>
+    <style>
+        #img1{
+            font-family:arial;
+            border-width: 20px;
+            border-style: solid;
+            border-color: brown;
+            height: 400px;
+            width: 500px;
+        }#main{
+            display:flex;
+        }
+        h1{color: burlywood}
+        h2{margin-left: 20px;
+        }
+        li{list-style-type: none;}
+        #list{ display: flex;margin-left: 0px;}
+        #campaign details{
+            vertical-align: baseline;
+            display: flex;
+        }
+        #all{ width: 40%;
+              height: 120%;
+              box-shadow: 0 0 100px -20px #e4dfdf inset;
+              border-radius: 2%;
+             
+              margin-left: 185px;
+              color:antiquewhite;
+              padding:10px;
+            }
+        #btn{margin-left: 40px;
+                color:antiquewhite;
+                background-color: rgb(55, 52, 49);
+                border-color: antiquewhite;
+                width: 100px;height: 50px;
+                text-align: center;
+        }#div1{
+            
+            display: flex;line-height: 3px;}#div2{ display: flex;line-height: 3px;}
+        #div3{line-height: 3px;}a{color:antiquewhite;
+            text-decoration:none}
+        #btn:hover{
+        background-color:rgb(92, 85, 75);
+        color: antiquewhite;
+        border-color: rgb(55, 52, 49);
+        transition: .5s;
+        cursor: pointer;}#div3{margin-left: 40px;}
+        #description{color: antiquewhite;}
+    </style>
+    <h1><u>Mirage to Reality</u></h1>
+    <div id="main"><img id="img1" src="images/well2.jpg" alt="">
+    <form action="backend.php" id="all">
+        <h2><u>Organiser and Benificiary</u></h2><div id="list">
+           <ul><li><h3><i>Organiser:</i></h3></li><li><i>BlueHorizon Wells Foundation</i></li></ul>
+           <ul><li><h3><i>Benificiary:</i></h3></li><li><i>BlueHorizon Wells Foundation</i></li></ul>
+        </div>
+        <br>
+        <div>
+            <button id="btn" type="button" onclick="printMessage()"><a href="page10.html">Donate now</a></button></div>
+        <div id="div1"> <ul><li><h4><i>Campaign Start date:</i></h4></li><li>Jan 3,2024</li><br>
+            <li><h4><i>Campaign End date:</i></h4></li><li>Feb 25,2024</li></ul>
+        </div>
+        <div id="div2">
+            <ul><li><h4><i>Amount Raised:</i></h4></li><li id="op">₹379500</li><br>
+                <li><h4><i>Target Amount:</i></h4></li><li>₹550000</li><br>
+        </div>
+        <div id="div3"><h4><i>Number of donations:</i></h4><p id="donor">695</p></div>
+    </form></div>
+    <div id="description">
+        <h3>Dear Supporters of Clean Water,</h3>
+        <p>Join us in making a lasting impact on the lives of the Thar community through the BlueHorizon Wells Foundation. Our mission is clear: to bring the gift of clean water to those in need. The arid landscapes of Thar pose a formidable challenge, but with your support, we aim to dig wells that will become life-changing sources of sustenance for the region. By contributing to the BlueHorizon Wells Foundation, you are investing in a future where communities thrive, agriculture flourishes, and the cycle of poverty is broken. Together, let's create a blue horizon for Thar—where water is abundant, hope springs eternal, and the foundation of a brighter tomorrow begins with a well. Your donation can turn this vision into reality. Support us today and be a part of the journey to bring clean, accessible water to the heart of Thar. </p>
+    <p>Water For Thar,</p>
+<p>BlueHorizon Wells Foundation</p></div>
+<script>
+    // Retrieve the user-entered number from sessionStorage
+    const userNumber = parseFloat(sessionStorage.getItem('userNumber'));
+
+    // Get the number from the <li> element
+    const amountRaisedElement = document.getElementById('op');
+    let amountRaised = parseFloat(amountRaisedElement.innerText.replace(/[^\d.-]/g, ''));
+    const noofDonors = document.getElementById('donor');
+    // Check if both numbers are valid
+    if (!isNaN(userNumber) && !isNaN(amountRaised)) {
+        // Perform addition
+        const result = userNumber + amountRaised;
+       
+        // Overwrite the value in the <li> element with the result
+        amountRaisedElement.innerText = `₹${result}`;
+        const currentDonorCount = parseInt(noofDonors.innerText);
+        noofDonors.innerText = currentDonorCount + 1;
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="campaign.css">
+</head>
+<body>
+    <style>
+       
+        #heading{
+            text-decoration: underline;
+            color: aqua;
+        }input{
+            color: antiquewhite;width: 300px;background-color:rgb(55, 52, 49);border-color: antiquewhite;
+        }
+    </style>
+    <div id="campaigns">
+        <!-- Display crowdfunding campaigns here -->
+    </div>
+    <section id="create-campaign">
+        
+        <form id="create-campaign-form">
+            <h2 id="heading">Create a Campaign</h2><br>
+            <label for="campaign-name">Campaign Name:</label>
+            <input type="text" id="campaign-name" required size="40" >
+            
+
+            <label for="goal-amount">Goal Amount:</label>
+            <input type="number" step="0.01" id="goal-amount" required>
+            
+            <label for="campaign-owner">Campaign Creator Info:</label>
+            <input type="text" id="campaign-owner" required>
+
+            <label for="campaign-type">What best describes your fundraising?:</label>
+            <input type="text" id="campaign-type" required>
+
+            <label for="campaign-span">Campaign Span:</label>
+            <input type="text" id="campaign-span" required><br>
+
+            <button type="button" onclick="createCampaign()">Create Campaign</button>
+        </form>
+    </section>
+</body>
+</html>

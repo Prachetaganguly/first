@@ -1,0 +1,23 @@
+#text{
+    margin-left: 130px;
+    -webkit-text-stroke: 1.5px rgb(220, 203, 220);
+}
+
+#main{ #main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+    margin-top: -70px;}
+body{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/about2.jpeg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#comments{color: pink;}
+#img1{
+    margin-left: 730px;
+    margin-top: -1000px;
+}

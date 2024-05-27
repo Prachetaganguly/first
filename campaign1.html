@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    <script>const firebaseConfig = {
+        apiKey: "AIzaSyB5dP878ReJnlsw--1fch1KgyvS6YgwG5Q",
+        authDomain: "authfun-1e52e.firebaseapp.com",
+        projectId: "authfun-1e52e",
+        storageBucket: "authfun-1e52e.appspot.com",
+        messagingSenderId: "417385711322",
+        appId: "1:417385711322:web:a2c98c8a6bc8e31461c7e3"
+      };
+          
+        
+            </script>
+</head>
+<style>body{
+    background-image: url('images/background1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;}</style>
+
+<body>
+    <style>
+        #img1{
+            font-family:arial;
+            border-width: 20px;
+            border-style: solid;
+            border-color: brown;
+            height: 400px;
+            width: 500px;
+        }#main{
+            display:flex;
+        }
+        h1{color: burlywood}
+        h2{margin-left: 20px;
+        }
+      li{list-style-type: none;}
+        #list{ display: flex;margin-left: 0px;}
+        #campaign details{
+            vertical-align: baseline;
+            display: flex;
+        }
+        #all{ width: 40%;
+              height: 120%;
+              box-shadow: 0 0 100px -20px #e4dfdf inset;
+              border-radius: 2%;
+              margin-left: 185px;
+              color:antiquewhite;
+              padding: 10px;
+            }
+        #btn{margin-left: 40px;
+                
+                background-color: rgb(55, 52, 49);
+                border-color: antiquewhite;
+                width: 100px;height: 50px;
+                text-align: center;
+        }#div1{
+            
+            display: flex;line-height: 3px;}#div2{ display: flex;line-height: 3px;}
+        #div3{line-height: 3px;}
+        a{color:antiquewhite;
+        text-decoration:none}
+        #btn:hover{
+        background-color:rgb(92, 85, 75);
+        color: antiquewhite;
+        border-color: rgb(55, 52, 49);
+        transition: .5s;
+        cursor: pointer;}#div3{margin-left: 40px;}
+        #description{color: antiquewhite;}
+      
+    </style>
+    <h1><u>Ephemeral Elegance</u></h1>
+    <div id="main"><img id="img1" src="images/museum2.jpg" alt="">
+    <form action="backend.php" id="all">
+        <h2><u>Organiser and Benificiary</u></h2><div id="list">
+           <ul><li><h3><i>Organiser:</i></h3></li><li><i>Don Bosco Museum</i></li></ul>
+           <ul><li><h3><i>Benificiary:</i></h3></li><li><i>Don Bosco Museum</i></li></ul>
+        </div>
+        <br>
+        <div>
+            <button id="btn" type="button" onclick="saveUserNumberAndRedirect()"><a href="page1.html">Donate now</a></button></div>
+        <div id="div1"> <ul><li><h4><i>Campaign Start date:</i></h4></li><li>Dec 20,2023</li><br>
+            <li><h4><i>Campaign End date:</i></h4></li><li>Feb 3,2024</li></ul>
+        </div>
+        <div id="div2">
+            <ul><li><h4><i>Amount Raised:</i></h4></li><li id="op" >₹209087</li><br>
+                <li><h4><i>Target Amount:</i></h4></li><li >₹350000</li><br>
+            </ul>
+        </div>
+        <div id="div3"><h4><i>Number of donations:</i></h4><p id="donor">667</p></div>
+    </form></div>
+    <div id="description">
+        <h3>Dear Friends and Patrons,</h3>
+        <p>We invite you to join us in preserving the cultural heritage and historical significance of our beloved museum. Our museum has stood as a guardian of art and history for decades, providing a window into the past for all who enter. However, time has taken its toll, and the need for repairs and renovations is pressing. We are launching a fundraising campaign to support the restoration efforts and create an engaging exhibition space that will continue to inspire and educate generations to come. The exhibitaion space will be open to the spectators from 19 Feb,2024.Your contribution will not only help repair the physical structure but will also breathe new life into the exhibits, ensuring that the stories and treasures within our museum endure. Together, let's make a lasting impact on the preservation of our shared history and culture. Donate today and be a crucial part of our museum's journey toward a vibrant and resilient future.</p>
+        <p>Warm regards,</p>
+        <p>Fr. Denis Lalfela SDB [Director]</p>
+    </div>
+    
+    
+
+    <script>
+        const userNumber = parseFloat(sessionStorage.getItem('userNumber'));
+
+        
+        const amountRaisedElement = document.getElementById('op');
+        let amountRaised = parseFloat(amountRaisedElement.innerText.replace(/[^\d.-]/g, ''));
+        const noofDonors = document.getElementById('donor');
+        
+        if (!isNaN(userNumber) && !isNaN(amountRaised)) {
+           
+            const result = userNumber + amountRaised;
+           
+            
+            amountRaisedElement.innerText = `₹${result}`;
+            const currentDonorCount = parseInt(noofDonors.innerText);
+            noofDonors.innerText = currentDonorCount + 1;
+
+}
+    </script>
+    
+
+
+</body>
+</html> 

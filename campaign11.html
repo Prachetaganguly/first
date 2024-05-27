@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><style>body{
+    background-image: url('images/background1.jpg');
+    background-repeat: no-repeat;
+    
+    background-size: 100% 100%;}</style>
+<body>
+    <style>
+        #img1{
+            font-family:arial;
+            border-width: 20px;
+            border-style: solid;
+            border-color: brown;
+            height: 400px;
+            width: 500px;
+        }#main{
+            display:flex;
+        }
+        h1{color: burlywood}
+        h2{margin-left: 20px;
+        }
+       li{list-style-type: none;}
+        #list{ display: flex;margin-left: 0px;}
+        #campaign details{
+            vertical-align: baseline;
+            display: flex;
+        }
+        #all{ width: 40%;
+              height: 120%;
+              box-shadow: 0 0 100px -20px #e4dfdf inset;
+              border-radius: 2%;
+             
+              margin-left: 185px;
+              color:antiquewhite;
+              padding:10px;
+            }
+        #btn{margin-left: 40px;
+                color:antiquewhite;
+                background-color: rgb(55, 52, 49);
+                border-color: antiquewhite;
+                width: 100px;height: 50px;
+                text-align: center;
+        }#div1{
+            
+            display: flex;line-height: 3px;}#div2{ display: flex;line-height: 3px;}
+        #div3{line-height: 3px;}a{color:antiquewhite;
+            text-decoration:none}
+        #btn:hover{
+        background-color:rgb(92, 85, 75);
+        color: antiquewhite;
+        border-color: rgb(55, 52, 49);
+        transition: .5s;
+        cursor: pointer;}#div3{margin-left: 40px;}
+        #description{color: antiquewhite;}
+    </style>
+    <h1><u>Cosmic Reverie</u></h1>
+    <div id="main"><img id="img1" src="images/space2.jpg" alt="">
+    <form action="backend.php" id="all">
+        <h2><u>Organiser and Benificiary</u></h2><div id="list">
+           <ul><li><h3><i>Organiser:</i></h3></li><li><i>Stellar Minds</i></li></ul>
+           <ul><li><h3><i>Benificiary:</i></h3></li><li><i>Stellar Minds</i></li></ul>
+        </div>
+        <br>
+        <div>
+            <button id="btn" type="button" onclick="printMessage()"><a href="page11.html">Donate now</a></button></div>
+        <div id="div1"> <ul><li><h4><i>Campaign Start date:</i></h4></li><li>Nov 29,2023</li><br>
+            <li><h4><i>Campaign End date:</i></h4></li><li>Feb 5,2024</li></ul>
+        </div>
+        <div id="div2">
+            <ul><li><h4><i>Amount Raised:</i></h4></li><li id="op">₹695300</li><br>
+                <li><h4><i>Target Amount:</i></h4></li><li>₹1100000</li><br>
+        </div>
+        <div id="div3"><h4><i>Number of donations:</i></h4><p id="donor">871</p></div>
+    </form></div>
+    <div id="description">
+        <h3>Dear Stargazers and Cosmic Enthusiasts,</h3>
+        <p>Join us on a celestial journey with Team Stellar Minds as we embark on a mission to bring the wonders of the universe to your screens! We are passionate about astrophysics and committed to sharing the mysteries of the cosmos through a captivating documentary. Imagine exploring the birth of stars, unraveling the secrets of black holes, and understanding the vastness of our ever-expanding universe. To turn this cosmic dream into a reality, we need your support. Your contribution will fuel the production, enabling us to capture the beauty of space in stunning visuals and deliver an awe-inspiring narrative. Together, let's reach for the stars and make this astrophysics documentary an illuminating experience for all. Join Team Stellar Minds, and let the universe unfold before your eyes!</p>
+        <p>Donate today and be a part of something truly stellar! </p>
+        <p>Team Stellar Minds</p>
+    </div>
+    <script>
+        // Retrieve the user-entered number from sessionStorage
+        const userNumber = parseFloat(sessionStorage.getItem('userNumber'));
+
+        // Get the number from the <li> element
+        const amountRaisedElement = document.getElementById('op');
+        let amountRaised = parseFloat(amountRaisedElement.innerText.replace(/[^\d.-]/g, ''));
+        const noofDonors = document.getElementById('donor');
+        // Check if both numbers are valid
+        if (!isNaN(userNumber) && !isNaN(amountRaised)) {
+            // Perform addition
+            const result = userNumber + amountRaised;
+           
+            // Overwrite the value in the <li> element with the result
+            amountRaisedElement.innerText = `₹${result}`;
+            const currentDonorCount = parseInt(noofDonors.innerText);
+            noofDonors.innerText = currentDonorCount + 1;
+
+}
+    </script>
+</body>
+</html>

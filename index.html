@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Crowdfunding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <style type="text/css">
+        body{
+            
+           background-image: url("images/crowdfunding1.jpg");
+           background-size:100% 25%;
+            background-repeat: no-repeat;
+            background-color: bisque;
+            background-position: fixed;
+          height: 2500px;  
+        }
+        #mybtn{
+            border-radius:30px;
+            color:antiquewhite;
+            background-color: rgb(55, 52, 49);
+            border-color: antiquewhite;
+            font-size: 20px;
+            padding-left: 0px;
+            margin-top:50px;
+            margin-left:20px;
+            
+        }#myDiv{
+            margin-left: 5%;
+            color: black;
+            margin-top: 40px;
+            font-weight: bolder;
+            
+        }
+        
+        body{
+            font-family: arial;
+        }
+        .main{
+            margin: 2%;
+            margin-top: 30%;
+        }
+        .card{
+            width: 20%;
+            display: inline-block;
+            box-shadow: 2px 2px 20px black;
+            border-radius: 5px; 
+            margin: 2%;
+            background-color:#9F8082;
+            color: black;
+            }.image img{
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        padding-left:0px;
+        margin-left: 0px;
+        }
+        .card:hover{background-color: #725b5c;
+        transform:scale(1.1);
+        z-index:2;
+    }
+        h1{
+        font-size: 20px;
+        text-align: center;
+        }
+
+        .des{
+        padding: 3px;
+        text-align: center;
+        
+        padding-top: 10px;
+                border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        }
+        button{
+        margin-top: 40px;
+        margin-bottom: 10px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding:10px;
+        
+        }a{color: rgb(220, 103, 122);}
+        button:hover{
+        background-color: black;
+        color: white;
+        transition: .5s;
+        cursor: pointer;
+        }#campaignSearch{height: 30px;
+        display:flex;cursor:pointer;border-radius: 30px;align-items: center;margin-top: 30px;
+        }.button1{color: pink;background-color: black;border-radius: 30px;margin-top: 30px;margin-left: 0px;border-color: white;}
+        .search-container{display: flex;}
+        </style>
+    <nav>
+        
+        <ul id="list"><li><div class="search-container">
+            <input type="text" id="campaignSearch" placeholder="Search...">
+        
+            <button onclick="searchCampaigns()" class="button1"><i class="fa fa-search"></i></button>
+        </div></li><label class="logo">SmartFundr</label>
+            
+            <li><a href="about.html">About</a></li>
+            
+            <li><a href="authentication.html">Sign-in/Sign-up</a></li>
+            
+        </ul></nav>
+        <button id="mybtn"><a href="campaign.html" id="mybtn">Start a SmartFundr</a></button>
+        <div id="myDiv">
+        <h1>Where Dreams</h1>
+        <h1>Turn Into Reality</h1><br>
+    </div>
+    <main>
+        <div id="campaigns">
+           
+        </div>
+        
+    
+        <div class="main">
+            
+        </div>
+    </main>
+    <div class="main">
+        <div class="card">
+            <div class="image">
+                <img id="img1" src="images/museum.jpg" >
+            </div>
+            <div class="title">
+             <h1>Ephemeral Elegance</h1>
+            </div>
+            <div class="des">
+             <p>Museum Restoration Campaign</p>
+             <button><a href="campaign1.html">Read More...</a></button>
+        </div>
+    </div>
+    <div class="card">
+
+            <div class="image">
+                <img src="images/community_garden.jpg">
+            </div>
+            <div class="title">
+                     <h1>Terra Thrive</h1>
+                </div>
+                    <div class="des">
+                     <p>Community Garden</p>
+                    <button><a href="campaign2.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/animal shelter.jpg">
+                </div>
+                 <div class="title">
+                         <h1>Whisker Watch</h1>
+                    </div>
+                        <div class="des">
+                         <p>Animal Shelter Support</p>
+                        <button><a href="campaign3.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/cultural fair.jpg">
+                </div>
+                 <div class="title">
+                         <h1>Artisan Odyssey</h1>
+                    </div>
+                        <div class="des">
+                         <p>Art and Cultural Fair</p>
+                        <button><a href="campaign4.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/child labour campaign.jpg">
+                </div>
+                 <div class="title">
+                         <h1>Break the Chains</h1>
+                    </div>
+                        <div class="des">
+                         <p>Anti-Child Labour</p>
+                        <button><a href="campaign5.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/cyclone relief.jpeg">
+                </div>
+                 <div class="title">
+                         <h1> Rebuild Resilience</h1>
+                    </div>
+                        <div class="des">
+                         <p>Cyclone Relief Operation</p>
+                        <button><a href="campaign6.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/marine cleanup.jpeg">
+                </div>
+                 <div class="title">
+                         <h1>Tidal Depths Cleanup</h1>
+                    </div>
+                        <div class="des">
+                         <p>Ocean Floor Cleanup</p>
+                        <button><a href="campaign7.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/orphanage.png">
+                </div>
+                 <div class="title">
+                         <h1>Harmony Haven</h1>
+                    </div>
+                        <div class="des">
+                         <p>Building an Orphanage</p>
+                        <button><a href="campaign8.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/salt collector.jpg">
+                </div>
+                 <div class="title">
+                         <h1>Step Safe Rann</h1>
+                    </div>
+                        <div class="des">
+                         <p>Supporting the Salt-Collectors</p>
+                        <button><a href="campaign9.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/well dig up.jpeg">
+                </div>
+                 <div class="title">
+                         <h1>Mirage to Reality</h1>
+                    </div>
+                        <div class="des">
+                         <p>A Well for Life</p>
+                        <button><a href="campaign10.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/astrophysics.jpg">
+                </div>
+                 <div class="title">
+                         <h1>Cosmic Reverie</h1>
+                    </div>
+                        <div class="des">
+                         <p>Astrophysics Documentary</p>
+                        <button><a href="campaign11.html">Read More...</a></button>
+                </div>
+            </div>
+            <div class="card">
+
+                <div class="image">
+                    <img src="images/green_tea.jpg">
+                </div>
+                 <div class="title">
+                         <h1>Garden Grace</h1>
+                    </div>
+                        <div class="des">
+                         <p>Green Tea Brand</p>
+                        <button><a href="campaign12.html">Read More...</a></button>
+                </div>
+            </div>
+            
+    </div>
+    <footer>
+        <p id="copyright">&copy; SmartFundr Blockchain Crowdfunding</p>
+    </footer>
+   
+<script>
+       function searchCampaigns() {
+            const searchInput = document.getElementById('campaignSearch').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const title = card.querySelector('.title h1').innerText.toLowerCase();
+                const description = card.querySelector('.des p').innerText.toLowerCase();
+
+                if (title.includes(searchInput) || description.includes(searchInput)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

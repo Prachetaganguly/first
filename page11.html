@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <link rel="stylesheet" type="text/css" href="donation.css">
+</head>
+<style>
+    body{
+        background-image: url('deer.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+<body>
+    <style>
+    #btn{margin-left: 40px;
+        color:antiquewhite;
+        background-color: rgb(55, 52, 49);
+        border-color: antiquewhite;
+        width: 100px;height: 50px;
+        text-align: center;}</style>
+<body>
+    <div class="container">
+        <form id="loginForm"><h3>PAYMENT</h3>Full name
+            <input type="text" name="" placeholder="Enter name">
+            City
+            <input type="text" name="" placeholder="Enter city">
+            State
+            <input type="text" name="" placeholder="Enter state">
+            Enter Amount<br>
+    <input type="number"  placeholder="Enter amount" id="userNumber">
+    <br><br>
+    <button id="btn" type="submit">Pay Now</button>
+    </div></form>
+
+    <script>
+       loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+            // Get the value entered by the user
+            const userNumber = parseFloat(document.getElementById('userNumber').value);
+
+            // Store the user-entered number in sessionStorage
+            sessionStorage.setItem('userNumber', userNumber);
+
+            // Redirect to page2.html
+            window.location.href = 'campaign11.html';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="campaignSearch" placeholder="Search campaigns by name or description...">
+        <button onclick="searchCampaigns()">Search</button>
+    </div>
+
+    <div class="main">
+        <!-- Your existing campaign cards -->
+    </div>
+    <script>
+        // Function to search campaigns
+        function searchCampaigns() {
+            // Get input value
+            const searchInput = document.getElementById('campaignSearch').value.toLowerCase();
+
+            // Get all campaign cards
+            const cards = document.querySelectorAll('.card');
+
+            // Loop through each card and hide/show based on search input
+            cards.forEach(card => {
+                const title = card.querySelector('.title h1').innerText.toLowerCase();
+                const description = card.querySelector('.des p').innerText.toLowerCase();
+
+                if (title.includes(searchInput) || description.includes(searchInput)) {
+                    card.style.display = 'campaign1.html';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

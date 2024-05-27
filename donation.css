@@ -1,0 +1,27 @@
+*{padding:0;margin:0;box-sizing:border-box;font-family:sans-serif;}
+header{width:100vw;
+    min-height: 100vh;
+    font-size: 1.2rem;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+margin-top: 100px;}
+.container{background: white;
+    max-width: 700px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;}
+form{
+    padding: 30px;color: antiquewhite;
+}
+form input[type="text"]{
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    margin:0.5rem 0;
+    outline:none;
+}
+.container{ box-shadow: 0 0 20px antiquewhite inset;
+    background: rgba(8, 8, 8, 0.5);}

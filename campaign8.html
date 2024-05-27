@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><style>body{
+    background-image: url('images/background1.jpg');
+    background-repeat: no-repeat;
+    
+    background-size: 100% 100%;}</style>
+<body>
+    <style>
+        #img1{
+            font-family:arial;
+            border-width: 20px;
+            border-style: solid;
+            border-color: brown;
+            height: 400px;
+            width: 500px;
+        }#main{
+            display:flex;
+        }
+        h1{color: burlywood}
+        h2{margin-left: 20px;
+        }
+        li{list-style-type: none;}
+        #list{ display: flex;margin-left: 0px;}
+        #campaign details{
+            vertical-align: baseline;
+            display: flex;
+        }
+        #all{ width: 40%;
+              height: 120%;
+              box-shadow: 0 0 100px -20px #e4dfdf inset;
+              border-radius: 2%;
+             
+              margin-left: 185px;
+              color:antiquewhite;
+              padding:10px;
+            }
+        #btn{margin-left: 40px;
+                color:antiquewhite;
+                background-color: rgb(55, 52, 49);
+                border-color: antiquewhite;
+                width: 100px;height: 50px;
+                text-align: center;
+        }#div1{
+            
+            display: flex;line-height: 3px;}#div2{ display: flex;line-height: 3px;}
+        #div3{line-height: 3px;}a{color:antiquewhite;
+            text-decoration:none}
+        #btn:hover{
+        background-color:rgb(92, 85, 75);
+        color: antiquewhite;
+        border-color: rgb(55, 52, 49);
+        transition: .5s;
+        cursor: pointer;}#div3{margin-left: 40px;}
+        #description{color: antiquewhite;}
+    </style>
+    <h1><u>Harmony Haven</u></h1>
+    <div id="main"><img id="img1" src="images/orphanage2.jpg" alt="">
+    <form action="backend.php" id="all">
+        <h2><u>Organiser and Benificiary</u></h2><div id="list">
+           <ul><li><h3><i>Organiser:</i></h3></li><li><i>LaughingLittles Community: Joyful Childcare Hub</i></li></ul>
+           <ul><li><h3><i>Benificiary:</i></h3></li><li><i>LaughingLittles Community: Joyful Childcare Hub</i></li></ul>
+        </div>
+        <br>
+        <div>
+            <button id="btn" type="button" onclick="printMessage()"><a href="page8.html">Donate now</a></button></div>
+        <div id="div1"> <ul><li><h4><i>Campaign Start date:</i></h4></li><li>Jan 9,2024</li><br>
+            <li><h4><i>Campaign End date:</i></h4></li><li>Feb 28,2024</li></ul>
+        </div>
+        <div id="div2">
+            <ul><li><h4><i>Amount Raised:</i></h4></li><li id="op">₹467825</li><br>
+                <li><h4><i>Target Amount:</i></h4></li><li>₹600000</li><br>
+        </div>
+        <div id="div3"><h4><i>Number of donations:</i></h4><p id="donor">478</p></div>
+    </form></div>
+    <div id="description">
+        <h3>Dear Compassionate Hearts,</h3>
+        <p>The LaughingLittles Community is embarking on a heartfelt mission to support and uplift the lives of children in need. We have the privilege of working closely with a local orphanage, providing a loving and nurturing environment for children who have faced life's most challenging circumstances. Today, we humbly reach out to you for your support in our fundraising efforts. Your generous contributions will directly impact the lives of these little ones, ensuring they receive not only the basic necessities but also the love and care every child deserves. Together, let's create a brighter future for these LaughingLittles. Your donation, no matter the amount, will make a profound difference in providing a safe haven and opportunities for a hopeful tomorrow. Join us in making a lasting impact on the lives of these children by donating to LaughingLittles Community's orphanage fund today</p>
+        <p>With heartfelt gratitude,</p>
+        <p>LaughingLittles Community</p></div>
+        <script>
+            // Retrieve the user-entered number from sessionStorage
+            const userNumber = parseFloat(sessionStorage.getItem('userNumber'));
+    
+            // Get the number from the <li> element
+            const amountRaisedElement = document.getElementById('op');
+            let amountRaised = parseFloat(amountRaisedElement.innerText.replace(/[^\d.-]/g, ''));
+            const noofDonors = document.getElementById('donor');
+            // Check if both numbers are valid
+            if (!isNaN(userNumber) && !isNaN(amountRaised)) {
+                // Perform addition
+                const result = userNumber + amountRaised;
+               
+                // Overwrite the value in the <li> element with the result
+                amountRaisedElement.innerText = `₹${result}`;
+                const currentDonorCount = parseInt(noofDonors.innerText);
+                noofDonors.innerText = currentDonorCount + 1;
+    
+    }
+        </script>
+</body>
+</html>
